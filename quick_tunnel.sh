@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Licensed under the Unlicense.
-# (C) FloppyDisk 2024, https://github.com/flpydsk/quick_tunnel.git
+# FloppyDisk 2024, https://github.com/flpydsk/quick_tunnel.git
 
 edge_ip_version="6"
 if [[ "$1" == "4" ]]
