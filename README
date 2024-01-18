@@ -1,0 +1,11 @@
+quick_tunnel
+Licensed under the Unlicense.
+Cloudflared Version: 2024.1.2
+
+Simple script allowing usage of quick tunnels with additional options or other configurations.
+
+I dont know any side effects of using this. I just got bored
+
+Usage: 
+  ./quick_tunnel.sh
+  Set $1 to 4 if you wish to use ipv4 connectivity to the edge.
