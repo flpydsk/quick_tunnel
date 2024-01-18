@@ -2,7 +2,7 @@ quick_tunnel
 Licensed under the Unlicense.
 Cloudflared Version: 2024.1.2
 
-Simple script allowing usage of quick tunnels with additional options or other configurations.
+Simple script allowing usage of quick tunnels with additional options or other configurations. like ha-connections
 
 I dont know any side effects of using this. I just got bored
 
