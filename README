@@ -3,9 +3,26 @@ Licensed under the Unlicense.
 Cloudflared Version: 2024.1.2
 
 Simple script allowing usage of quick tunnels with additional options or other configurations. like ha-connections
+Some other stuff may end up here as a result of looking around in cloudflared
 
 I dont know any side effects of using this. I just got bored
 
 Usage: 
   ./quick_tunnel.sh
   Set $1 to 4 if you wish to use ipv4 connectivity to the edge.
+
+Cool undocumented options, not a complete list, just ones I find interesting and/or wish to mess with
+tunnel:
+  --edge "address:port" - Specify edge addresses to dial up to
+  --ha-connections      - Specify the number of connections to dial to the edge, 1-40 Generally globally there are 40 addresses advertised, you can not have >9 connections to a single metal and usually tunnels fail at 39 connections
+  --trace               - set a trace ID
+  --api-url             - Tunnel API URL
+  --cacert              - edge CA certificate, this would allow us to stand up our own edge servers
+  --use-reconnect-token - Test flag for what appears to be a new flow for reconnection
+  --stdin-control       - echoing restart to stdin will restart a random connector
+  --quick-service       - a quick service api, this orchestrates the trycloudflare.com tunnel hostnames, want your own quick tunnels api?
+  --heartbeat-count     - Close connection after number of failed heartbeats
+  --heartbeat-interval  - Interval in seconds of heartbeats
+  --dial-edge-timeout   - Edge dial timeout in seconds
+  --ssh-idle-timeout    - Kills an idle connection, Does this work for non bastion or TCP connections?
+  --ssh-max-timeout     - ""
