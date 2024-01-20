@@ -5,11 +5,19 @@ Cloudflared Version: 2024.1.2
 Simple script allowing usage of quick tunnels with additional options or other configurations. like ha-connections
 Some other stuff may end up here as a result of looking around in cloudflared
 
-I dont know any side effects of using this. I just got bored
+I dont know any side effects of using this.
+IPv6 default
 
-Usage: 
-  ./quick_tunnel.sh
-  Set $1 to 4 if you wish to use ipv4 connectivity to the edge.
+root: (Remote managed quick tunnel)
+  ./quick_tunnel.sh  - Standard quick tunnel, running in remote managed mode, can use standard cli options
+
+custom_config: (Locally managed quick tunnel)
+  ./quick_tunnel.sh  - Mostly the same script, Just shoehorns in a config.yml with the hostnames replaced on each run with the current
+  config.yml.example - Skel config, add your cloudflared configuration in here after copying it to config.yml.
+
+Note that only the quick tunnel dns name will work, this does not affect Cloudflare dns config.
+This just means that you can use other protocols, for example SSH
+
 
 Cool undocumented options, not a complete list, just ones I find interesting and/or wish to mess with
 tunnel:

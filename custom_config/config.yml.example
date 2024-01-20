@@ -1,0 +1,4 @@
+ingress:
+  - hostname: HOSTNAME_PLACEHOLDER
+    service: hello_world
+  - service: http_status:404
